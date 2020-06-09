@@ -1,0 +1,11 @@
+[Unit]
+Description=TONTgBotContract
+After=syslog.target
+
+[Service]
+Type=simple
+ExecStart=/etc/init.d/tontgbotcontract start
+ExecStop=/etc/init.d/tontgbotcontract stop
+
+[Install]
+WantedBy=multi-user.target
