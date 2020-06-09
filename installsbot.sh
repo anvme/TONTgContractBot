@@ -1,7 +1,7 @@
 #!/bin/bash
 
-apt update
-apt -y install cargo
+#apt update
+#apt -y install cargo 
 apt -y install python3-pip
 pip3 install --upgrade psutil
 pip3 install --upgrade pyTelegramBotAPI
@@ -9,11 +9,11 @@ pip3 install --upgrade pyTelegramBotAPI
 # Solidity Compiler
 git clone -v https://github.com/tonlabs/samples.git /opt/ton-contract-sample
 git clone -v https://github.com/tonlabs/TVM-linker.git /opt/ton-tvm-linker
-# On error TVM-linker
-curl https://sh.rustup.rs -sSf | sh -s -- -y
-. "$HOME/.cargo/env"
-rustup update
-# /On error TVM-linker
+# On error TVM-linker uncomment
+#curl https://sh.rustup.rs -sSf | sh -s -- -y
+#. "$HOME/.cargo/env"
+#rustup update
+# /On error TVM-linker uncomment
 cd /opt/ton-tvm-linker/tvm_linker && cargo build
 git clone -v https://github.com/tonlabs/TON-Solidity-Compiler.git /opt/ton-solidity-compiler
 mkdir -p /opt/ton-solidity-compiler/compiler/build && chmod +x /opt/ton-solidity-compiler/compiler/scripts/install_deps.sh
